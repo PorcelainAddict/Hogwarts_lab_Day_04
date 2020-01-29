@@ -1,0 +1,19 @@
+<p>Hello visitor, Welcome to the magical school of witchcraft and wizardry!</p>
+
+<p>Hey Mouldy Voldy ol' pal, here's our current students 🐍</p>
+
+
+<% for student in @students %>
+ <p>Student Name: <%= student.full_name() %></p>
+ <p>Age: <%= student.age %></p>
+ <p>House: <%= student.houses %></p>
+ <form action="/hogwarts/<%=student.id%>/delete" method="post">
+
+
+ <input type="submit" name="" value="Delete">
+ </form>
+
+<hr />
+
+<% end %>
+<p>Interested in become a magical person? Why not<a href="/hogwarts/new"> apply??</a></p>
